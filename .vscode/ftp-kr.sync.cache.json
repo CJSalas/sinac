@@ -1,0 +1,8 @@
+{
+  "ftp://cpanel.freehosting.com:21@sinactes": {
+    "public_html": {
+      "sinac": {}
+    }
+  },
+  "$version": 1
+}

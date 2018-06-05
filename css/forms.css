@@ -1,0 +1,85 @@
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+
+/* Centre the page */
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
+    min-height: 0rem;
+    padding-top: 2.5rem;
+}
+
+/* Centre the form within the page */
+form.frmsinac {
+    margin:0 auto;
+    width:459px;
+}
+
+/* Style the text boxes */
+input, textarea, select {
+	width:439px;
+	height:auto;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+textarea {
+	height:213px;
+	background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+}
+
+input, textarea, select {
+    width:439px;
+    height:auto;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border:1px solid #97d6eb;
+}
+
+#submit {
+    /*width:127px;
+    height:38px;
+    background:url(images/submit.jpg);
+    text-indent:-9999px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;*/
+    width: 120px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 6px;
+    border: 2px solid #000000;
+    margin-top: 20px;
+}
+
+#submit:hover {
+    /*opacity:.9;*/
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.border-white {
+    border:1px solid #ffffff;
+}
