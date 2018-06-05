@@ -30,6 +30,14 @@ body {
     text-align:center;
  }
 
+ .tableList thead th{
+  text-align:left;
+ }
+
+ .align-head {
+  text-align:left;
+}
+
  .form-error {
   display: block;
   color: #b94a48;

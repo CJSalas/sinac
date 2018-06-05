@@ -11,11 +11,11 @@
 
 		public function __construct($sql){
 			$this->sql = $sql;
-			$this->username = "sinactes_root";//"root";//"sinactes_root";
-			$this->password = "!?[hn{&PFt]?";//"";//"!?[hn{&PFt]?";
-			$this->hostname = "localhost:3306";//"localhost";//"cpanel.freehosting.com";
+			$this->username = "sinactes_root";//"root";//"timarsac_admin";sinactes_root
+			$this->password = "!?[hn{&PFt]?";//"";//"!?[hn{&PFt]?";(LOROI=J;p%R
+			$this->hostname = "localhost:3306";//"localhost:3306";//"localhost:2067";
 			$this->dataConnection = "";
-			$this->databasename = "sinactes_mydbsinac";//"mydbsinac";//"sinactes_mydbsinac";
+			$this->databasename = "sinactes_mydbsinac";//"timarsac_mydbsinac";//"sinactes_mydbsinac";timarsac_mydbsinac
 		}
 
 		public function DBLogin()
@@ -41,24 +41,6 @@
 		} 
 
 		public function getConnecion(){
-			/*$array = array();
-
-			$mysqli = new mysqli($this->hostname,$this->username,$this->password,$this->databasename); 
-
-			$result = $mysqli->query($this->sql) 
-			or die($mysqli->error); 
-			
-			while ($data = $result->fetch_assoc()){
-				//echo $data['nombre_institucion'];
-				$array[] = $data;
-			}
-			
-			// Close connection
-			$mysqli->close();
-
-			//Resturn data
-			//echo $arr_length = count($array); 
-			return $array;*/
 			$array = array();
 			if(!$this->DBLogin())
 			{
@@ -81,20 +63,14 @@
 		}
 
 		public function setConnection(){
-			// Create connection object
-			//$mysqli = new mysqli($this->hostname,$this->username,$this->password,$this->databasename);
-			// Performed query 
-			//$result = $mysqli->query($this->sql) 
-			//or die($mysqli->error); 
-			// Close connection
-			//$mysqli->close();
 			if(!$this->DBLogin())
 			{
 				echo("Error getting \nquery:$this->sql");
 				return false;
 			} 
 			mysql_query( $this->sql ,$this->dataConnection);
-			return true;
+			$last_id = mysql_insert_id();
+			return $last_id;
 		}
 
 		public function getTotalOfNumbers(){
@@ -106,25 +82,9 @@
 				return false;
 			} 
 			$result = mysql_query( $this->sql ,$this->dataConnection);
-
-			//$mysqli = new mysqli($this->hostname,$this->username,$this->password,$this->databasename); 
-
-			//$result = $mysqli->query($this->sql) 
-			//or die($mysqli->error); 
-
 			$totalofnumbers = mysql_num_rows($result);
 			
-			// Close connection
-			//$mysqli->close();
-
-			//Resturn data
-			//echo $arr_length = count($array); 
 			return $totalofnumbers;
 		}
-		
-		/*function HandleError($err)
-		{
-			$this->error_message .= $err."\r\n";
-		}*/
     }
 ?>

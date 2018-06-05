@@ -61,6 +61,7 @@
 
 		public function updateSector(){			
 			require_once("../manager/connectionDB.php");
+			echo("ENTRO CLASE".$this->nombre_sector);
 			$connection = ConnectionDB::class;
 			$sql = "UPDATE sector SET nombre_sector='$this->nombre_sector' WHERE idSector=$this->id_sector";
 			$connection = new ConnectionDB($sql);
@@ -78,12 +79,15 @@
 		public function searchSectors($page, $record_per_page){
 			require_once("../manager/connectionDB.php");
 			$connection = ConnectionDB::class;
-			$start_from_page = ($page - 1) * $record_per_page;
-			$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector ASC LIMIT $start_from_page, $record_per_page";
+			if($page === "" || $record_per_page === ""){
+				$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector ";
+			}else if($page != null || $record_per_page != null){
+				$start_from_page = ($page - 1) * $record_per_page;
+				$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector ASC LIMIT $start_from_page, $record_per_page";
+			}
 			$connection = new ConnectionDB($sql);
 			$array = $connection->getConnecion();
 			return $array;
-		}
-		
+		}		
 	}
 ?>

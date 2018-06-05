@@ -3,14 +3,15 @@
 		
 		private $id_conac= "";
 		private $nombre_conac = "";
-		private $Miembro = Miembros::class;
-		private $Corac = Corac::class;
+		private $idMiembro = 0;
+		private $idCorac = 0;
 		private $sql;
 		
-		public function __construct($id_conac, $nombre_conac, $Miembro){
+		public function __construct($id_conac, $nombre_conac, $idMiembro, $idCorac){
 			$this->id_conac= $id_conac;
 			$this->nombre_conac= $nombre_conac;
-			$this->Miembro = $Miembro;
+			$this->idMiembro= $idMiembro;
+			$this->idCorac= $idCorac;
 		}
 
 		public static function create() {
@@ -34,20 +35,20 @@
 			return $this->nombre_conac;
 		}
 		
-		public function setMiembro(Conac $Miembro){
-			$this->Miembro= $Miembro;
+		public function setMiembro(Conac $idMiembro){
+			$this->idMiembro= $idMiembro;
 		}
 		
 		public function getMiembro() {
-			return $this->Miembro;
+			return $this->idMiembro;
 		}
 		
-		public function setCorac(Conac $Corac){
-			$this->Corac= $Corac;
+		public function setCorac(Conac $idCorac){
+			$this->idCorac= $idCorac;
 		}
 		
 		public function getCorac() {
-			return $this->Corac;
+			return $this->idCorac;
 		}
 		
 		public function setSQL(Conac $sql){

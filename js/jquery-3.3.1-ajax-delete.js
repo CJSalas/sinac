@@ -1,5 +1,27 @@
+function onDeleteMiembros(id_miembro, id_suplente){
+    event.stopPropagation();
+    alert(""+id_miembro);
+    $.ajax({
+        url:"../manager/gestorRegistro.php",
+        type:"post",
+        data: 
+        {  
+            id_miembro : id_miembro,
+            id_suplente : id_suplente,
+            function2Call: 'deleteMiembro'
+        },
+        cache:false,
+        success: function (html) 
+        {
+            $('.html').html(html);
+            getMiembros(1);
+        }
+    });
+    
+}
+
 function onDeleteSectors(id_sector){
-    alert(""+id_sector);
+    event.stopPropagation();
     $.ajax({
         url:"../manager/gestorRegistro.php",
         type:"post",
@@ -13,41 +35,67 @@ function onDeleteSectors(id_sector){
         {
             $('.html').html(html);
             getSectors(1);
-            setPaginationButtonEvents();
         }
     });
-    /*var cedulaU=document.getElementById('cedulaU').value;
-    var nameU=document.getElementById('nameU').value;
-    var lastnameU=document.getElementById('lastnameU').value;
-    var bdayU=document.getElementById('bdayU').value;
-    var sigindayU=document.getElementById('sigindayU').value;
-    var addressU=document.getElementById('addressU').value;
-    var emailU=document.getElementById('emailU').value;
-    var cedulaSupU=document.getElementById('cedulaSupU').value;
-    var institutionU=document.getElementById('institutionU').value;
-    var activoU=document.getElementById('activoU').value;
+    
+}
+
+function onDeleteInstituciones(id_instituciones){
+    event.stopPropagation();
     $.ajax({
-        url:"manager/gestorRegistro.php",
+        url:"../manager/gestorRegistro.php",
         type:"post",
         data: 
         {  
-           'cedulaU' :cedulaU,
-           'nameU' :nameU,
-           'lastnameU' :lastnameU,
-           'bdayU' :bdayU,
-           'sigindayU' :sigindayU,
-           'addressU' :addressU,
-           'emailU' :emailU,
-           'cedulaSupU' :cedulaSupU,
-           'institutionU' :institutionU,
-           'activoU' :activoU
+            id_instituciones : id_instituciones,
+            function2Call: 'deleteInstituciones'
         },
         cache:false,
         success: function (html) 
         {
-           alert('Data Send');
-           $('#msg').html(html);
+            $('.html').html(html);
+            getInstitutions(1);
         }
     });
-    return false;*/
+    
+}
+
+function onDeleteCoracs(id_coracs){
+    event.stopPropagation();
+    $.ajax({
+        url:"../manager/gestorRegistro.php",
+        type:"post",
+        data: 
+        {  
+            id_coracs : id_coracs,
+            function2Call: 'deleteCoracs'
+        },
+        cache:false,
+        success: function (html) 
+        {
+            $('.html').html(html);
+            getCorac(1);
+        }
+    });
+    
+}
+
+function onDeleteColacs(id_colac){
+    event.stopPropagation();
+    $.ajax({
+        url:"../manager/gestorRegistro.php",
+        type:"post",
+        data: 
+        {  
+            id_colac : id_colac,
+            function2Call: 'deleteColac'
+        },
+        cache:false,
+        success: function (html) 
+        {
+            $('.html').html(html);
+            getColac(1);
+        }
+    });
+    
 }

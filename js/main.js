@@ -2,7 +2,6 @@
 (function ($) {
     "use strict";
 
-
     /*==================================================================
     [ Focus Contact2 ]*/
     $('.input3').each(function(){
@@ -28,6 +27,44 @@
     $("#radio2").on('change', function(){
         if ($(this).is(":checked")) {
             $('.input3-select').slideDown(300);
+        }
+    });
+
+    $("#radio3").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input4-select').slideUp(300);
+        }
+    });
+
+    $("#radio4").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input4-select').slideDown(300);
+        }
+    });
+
+    $("#radio8").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input5-select').slideUp(300);
+        }
+    });
+
+    $("#radio7").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input5-select').slideDown(300);
+        }
+    });
+
+    $("#radio0").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input1-select').slideUp(300);
+            $('.input2-select').slideDown(300);
+        }
+    });
+
+    $("#radio9").on('change', function(){
+        if ($(this).is(":checked")) {
+            $('.input1-select').slideDown(300);
+            $('.input2-select').slideUp(300);
         }
     });
         
@@ -61,7 +98,6 @@
 
         return check;
     });
-
 
     $('.validate-form .input3').each(function(){
         $(this).focus(function(){
