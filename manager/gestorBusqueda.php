@@ -118,7 +118,7 @@
 
                     var data = google.visualization.arrayToDataTable([
                     ['Sector', 'Instituciones'],
-                    ['Instituciones públicas presentes en el área',     number1],
+                    ['Instituciones p&ucute;blicas presentes en el &acute;rea',     number1],
                     ['Municipalidades',      number2],
                     ['Organizaciones no gubernamentales y comunales del estado',  number3]
                     ]);
@@ -142,7 +142,7 @@
 
                     $html = $html."var data2 = google.visualization.arrayToDataTable([
                     ['ID',   'Actores','Instituciones', 'Sector'],
-                    ['IPPA',    total1, number1,        'Instituciones pública presentes en el área'],
+                    ['IPPA',    total1, number1,        'Instituciones p&ucute;blica presentes en el &acute;rea'],
                     ['MUNI',    total2, number2,        'Municipalidades'],
                     ['ONGs',    total3, number3,        'Organizaciones no gubernamentales y comunales del estado']
                     ]);
