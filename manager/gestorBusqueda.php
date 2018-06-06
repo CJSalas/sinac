@@ -102,18 +102,19 @@
             $i = $i + 1;
         }
 
-        $html += "<script type='text/javascript'>                            
+        $html = $html."<script src='/sinac/js/jquery-3.3.1.min.js' integrity='' crossorigin='anonymous'>
+        </script><script type='text/javascript'>                            
                 google.charts.load('current', {'packages':['corechart']});
                 google.charts.setOnLoadCallback(drawChart);
                 function drawChart() {";
         
         $i = 1;
         foreach ($array as $data){
-            $html += "var number".$i." = parseInt(document.getElementById('idSectorInst".$i."').value)";
+            $html = $html."var number".$i." = parseInt(document.getElementById('idSectorInst".$i."').value); ";
             $i = $i + 1;
         }
         
-        $html += "
+        $html = $html."
 
                     var data = google.visualization.arrayToDataTable([
                     ['Sector', 'Instituciones'],
@@ -130,22 +131,20 @@
                     'height':400 
                     };
                     
-                    //if(getElementById('piechart')){
                     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                    chart.draw(data, options1);
-                    //}";
+                    chart.draw(data, options1); ";
                 
                     $i = 1;
                     foreach ($array as $data){
-                        $html += "var total".$i." = parseInt(document.getElementById('idSectorMiembro".$i."').value)";
+                        $html = $html."var total".$i." = parseInt(document.getElementById('idSectorMiembro".$i."').value); ";
                         $i = $i + 1;
                     }
 
-                    $html += "var data2 = google.visualization.arrayToDataTable([
+                    $html = $html."var data2 = google.visualization.arrayToDataTable([
                     ['ID',   'Actores','Instituciones', 'Sector'],
                     ['IPPA',    total1, number1,        'Instituciones pública presentes en el área'],
                     ['MUNI',    total2, number2,        'Municipalidades'],
-                    ['ONGs',    total3, number3,        'Organizaciones no gubernamentales y comunales del estado'],
+                    ['ONGs',    total3, number3,        'Organizaciones no gubernamentales y comunales del estado']
                     ]);
 
                     var options2 = {

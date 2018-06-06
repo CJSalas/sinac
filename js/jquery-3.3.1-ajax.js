@@ -169,7 +169,7 @@ function setPaginationButtonEventsListaActores(){
 
 function getInstitutions(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getInstitutions', page:page},
         type: "post",
         success: function (output) 
@@ -182,7 +182,7 @@ function getInstitutions(page){
 
 function getInstitutionsSectors(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getInstitutionsSectors'},
         type: "post",
         //dataType: 'json', 
@@ -197,7 +197,7 @@ function getInstitutionsSectors(){
 
 function getSectors(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getSectors', page:page},
         type: "post",
         //dataType: 'json', 
@@ -211,7 +211,7 @@ function getSectors(page){
 
 function getCorac(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getCorac', page:page},
         type: "post",
         //dataType: 'json', 
@@ -226,7 +226,7 @@ function getCorac(page){
 
 function getConacCorac(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getConacCorac'},
         type: "post",
         //dataType: 'json', 
@@ -241,7 +241,7 @@ function getConacCorac(){
 
 function getColac(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getColac', page:page},
         type: "post",
         //dataType: 'json', 
@@ -256,7 +256,7 @@ function getColac(page){
 
 function getCoracColac(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getCoracColac'},
         type: "post",
         //dataType: 'json', 
@@ -271,7 +271,7 @@ function getCoracColac(){
 
 function getCoracColacMiembros(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getCoracColac'},
         type: "post",
         //dataType: 'json', 
@@ -286,7 +286,7 @@ function getCoracColacMiembros(){
 
 function getActores(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getChartInformation'},
         type: "post",
         //dataType: 'json', 
@@ -301,7 +301,7 @@ function getActores(){
 
 function getlistaActores(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getListaInformation', page:page},
         type: "post",
         //dataType: 'json', 
@@ -316,7 +316,7 @@ function getlistaActores(page){
 
 function getMiembros(page){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getMiembros', page:page},
         type: "post",
         //dataType: 'json', 
@@ -331,7 +331,7 @@ function getMiembros(page){
 
 function getMiembrosInstituciones(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getMiembrosInstituciones'},
         type: "post",
         //dataType: 'json', 
@@ -346,7 +346,7 @@ function getMiembrosInstituciones(){
 
 function getMiembrosColac(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getMiembrosColac'},
         type: "post",
         //dataType: 'json', 
@@ -361,7 +361,7 @@ function getMiembrosColac(){
 
 function getMiembrosMiembros(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getMiembrosMiembros'},
         type: "post",
         //dataType: 'json', 
@@ -376,7 +376,7 @@ function getMiembrosMiembros(){
 
 function getSuplentesMiembros(){
     $.ajax({
-        url:"/manager/gestorBusqueda.php",
+        url:"../manager/gestorBusqueda.php",
         data: {function2Call: 'getSuplentesMiembros'},
         type: "post",
         //dataType: 'json', 

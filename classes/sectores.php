@@ -80,7 +80,7 @@
 			require_once("../manager/connectionDB.php");
 			$connection = ConnectionDB::class;
 			if($page === "" || $record_per_page === ""){
-				$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector ";
+				$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector";
 			}else if($page != null || $record_per_page != null){
 				$start_from_page = ($page - 1) * $record_per_page;
 				$sql = "SELECT idSector, nombre_sector FROM sector ORDER BY idSector ASC LIMIT $start_from_page, $record_per_page";
